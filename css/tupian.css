@@ -1,0 +1,40 @@
+.weui-tabbar__item>span{
+	background-size: cover;
+	width:0.4rem;
+	height: 0.4rem;
+
+}
+.weui-tabbar__item>span.active+.weui-tabbar__label{
+	color: #3479F7
+
+}
+.weui-tabbar__label{
+	font-size: 0.24rem;
+}
+.weui-tabbar{
+	padding-top: 5px;
+}
+.nav-daka{
+	background-image: url(../images/daka.png);
+}
+.nav-huiyi{
+	background-image: url(../images/huiyi.png);
+}
+.nav-renwu{
+		background-image: url(../images/renwu.png);
+}
+.nav-wode{
+		background-image: url(../images/wode.png);
+}
+.nav-daka.active{
+	background-image: url(../images/daka_a.png);
+}
+.nav-huiyi.active{
+	background-image: url(../images/huiyi_a.png);
+}
+.nav-renwu.active{
+		background-image: url(../images/renwu_a.png);
+}
+.nav-wode.active{
+		background-image: url(../images/wode_a.png);
+}

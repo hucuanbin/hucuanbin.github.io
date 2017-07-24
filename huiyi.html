@@ -1,0 +1,141 @@
+
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,,maximum-scale=1,user-scalable=no"> 
+	<meta http-equiv="Cache-Control" content="no-siteapp" />
+	<meta name="apple-mobile-web-app-title" content="标题" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent/black/default" />
+	<meta name="format-detection" content="telephone=no;email=no" />
+	<title>九点一刻</title>
+
+	<link rel="stylesheet" type="text/css" href="lib/weui-master/dist/style/weui.min.css">
+	<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_fwzhsy662klw61or.css">
+	<link rel="stylesheet" type="text/css" href="css/jichu.css">
+	<link rel="stylesheet" type="text/css" href="css/mycss.css">
+	<link rel="stylesheet" type="text/css" href="css/tupian.css">
+	<script type="text/javascript" src="js/jichu.js"></script>
+
+	<style>
+
+	</style>
+</head>
+<body class="page-group-body">  
+	<div class="page-group">
+		<header class="bar bar-nav">
+			<h1 class="page-header-title fs—36">
+				会议
+			</h1>
+		</header>
+		<nav class="bar bar-tab weui-tabbar">
+			<a href="index.html" class="weui-tabbar__item">
+				<span class="weui-tabbar__icon nav-daka"></span>
+				<p class="weui-tabbar__label">打卡</p>
+			</a>
+			<a href="huiyi.html" class="weui-tabbar__item">
+				<span class="weui-tabbar__icon nav-huiyi active"></span>
+				<p class="weui-tabbar__label">会议</p>
+			</a>
+			<a href="renwu.html" class="weui-tabbar__item">
+				<span class="weui-tabbar__icon nav-renwu"></span>
+				<p class="weui-tabbar__label">任务</p>
+			</a>
+			<a href="login.html" class="weui-tabbar__item">
+				<span class="weui-tabbar__icon nav-wode"></span>
+				<p class="weui-tabbar__label">我的</p>
+			</a>
+		</nav>
+		<div class="content">
+			<div class="text-center bg-fff p30">
+				<div class="huiYiTop">
+					<div class="display-ib">
+						<button class="huiyiButon noOpen fs—36">开始计时</button>
+					</div>
+				</div>
+			</div>
+			<div class="text-center huiyiTouxiang fs-0">
+				<div class="weui-flex">
+					<div class="weui-flex__item">
+						<div class="bgBlue isTrue">
+							<img src="images/touxiang1.jpg" class="width48">
+						</div>
+					</div>
+					<div class="weui-flex__item">
+						<div class="bgBlue active">
+							<img src="images/touxiang2.jpg" class="width48">
+						</div>
+					</div>
+					<div class="weui-flex__item">
+						<div class="bgBlue">
+							<img src="images/touxiang3.jpg" class="width48">
+						</div>
+					</div>
+				</div>
+				<div class="weui-flex">
+					<div class="weui-flex__item">
+						<div class="bgBlue">
+								<img src="images/touxiang4.jpg" class="width48">
+						</div>
+					</div>
+					<div class="weui-flex__item">
+						<div class="bgBlue">
+							<img src="images/touxiang5.jpg" class="width48">
+						</div>
+					</div>
+				</div>
+				<div class="weui-flex">
+					<div class="weui-flex__item">
+						<div class="bgBlue">
+							<img src="images/touxiang6.jpg" class="width48">
+						</div>
+					</div>
+					<div class="weui-flex__item">
+						<div class="bgBlue">
+							<img src="images/touxiang7.jpg" class="width48">
+						</div>
+						
+					</div>
+					<div class="weui-flex__item">
+						<div class="bgBlue">
+							<img src="images/touxiang8.jpg" class="width48">
+						</div>
+					</div>
+				</div>
+				<div class="weui-flex">
+					<div class="weui-flex__item">
+						<div class="bgBlue">
+							<img src="images/touxiang2.jpg" class="width48">
+						</div>
+					</div>
+					<div class="weui-flex__item">
+						<div class="bgBlue">
+							<img src="images/touxiang6.jpg" class="width48">
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="lib/zepto/zepto.min.js"></script>
+	<script type="text/javascript" src="js/my.js"></script>
+	<script type="text/javascript">
+		$(".huiYiTop .huiyiButon").click(function(){
+			var $this=$(".huiYiTop .huiyiButon"),timeOut,timeNum=60*2*1000-1000;
+			$this.prop("disabled",true).text("02:00").parents(".huiYiTop").addClass('active');
+			timeOut=setInterval(function(){ //setInterval
+				$this.text(new Date(timeNum).Format("mm:ss"));
+				timeNum-=1000;
+				if(timeNum<=0){
+					$this.prop("disabled",false).parents(".huiYiTop").removeClass('active');
+				}
+			},1000)
+		});
+
+	</script>
+</script>
+</body>
+</html>
